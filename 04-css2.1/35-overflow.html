@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<main>>, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body {
+            background-color: palegreen;
+        }
+        main {
+            margin: 40px auto;
+            width: 560px;
+        }
+        main section {
+            border: 1px solid #777;
+            display: inline-block;
+            height: 180px;
+            padding: 10px;
+            vertical-align: top;
+            width: 140px;
+        }
+        main section h3 {
+            background-color: #aae;
+            margin: 0px;
+            padding: 0px;
+
+        }
+        main section.visible { overflow: visible;}
+        main section.hidden {overflow: hidden;}
+        main section.scroll { overflow: scroll}
+    </style>
+</head>
+<body>
+    <main>
+        <section class="visible">
+            <h3>overflow:visible</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Recusandae sed dicta perferendis dolor accusamus. Corrupti optio eveniet debitis vitae doloremque quod, tenetur officiis ab ipsa deleniti dolorem unde possimus a!</p>
+        </section>
+        <section class="hidden">
+            <h3>overflow:visible</h3>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Omnis quas iusto, corrupti numquam doloremque voluptas sint rem repudiandae quasi eius voluptate, eaque quo et maiores culpa voluptatem ipsum placeat quod!</p>
+        </section>
+        <section class="scroll">
+            <h3>overflow:visible</h3>
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Necessitatibus accusantium, non commodi cum corporis a dolorum facere repudiandae ipsa facilis error et eius eveniet, quaerat modi aliquam eum, eos temporibus.</p>
+        </section>
+    </main>
+</body>
+</html>
