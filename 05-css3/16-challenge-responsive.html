@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menu</title>
+    <style>
+     * { transition: all 0.5s ease-out  }
+
+        body {
+            background-color: #000000;
+        }
+        main figure.logo {
+            border: 2px solid #e555;
+            background: url(imgs/challenge/Untitled.png) no-repeat center;
+            height: 470px;
+            margin: 0px auto;
+            width: 580px;
+        }
+        main h1 {
+            text-align: center;
+        }
+        main h1 small {
+            font-size: 0.4em;
+        }
+        main h1 small.bp2,
+        main h1 small.bp3 {
+            display: none;
+        }
+       
+         @media (max-width: 1024px) {
+            main figure.logo {
+                background: url(imgs/challenge/Untitled\ 1.png) no-repeat center;
+                height: 235px;
+                width: 415px;
+            }
+            main h1 small.bp1,
+            main h1 small.bp3 {
+                display: none;
+            }
+            main h1 small.bp2 {
+                display: inline;
+            }
+         }
+
+        @media (max-width: 780px) {
+            main figure.logo {
+                background: url(imgs/challenge/Logo.png) no-repeat center;
+                height: 160px;
+                width: 170px;
+            }
+            main h1 small.bp1,
+            main h1 small.bp2 {
+                display: none;
+            }
+            main h1 small.bp3 {
+                display: inline;
+            }
+        }
+            
+
+    </style>
+</head>
+<body>
+    <main>
+        <figure class="logo"></figure>
+        <h1> 
+            Media Queries 
+            <small class="bp1">( > 1024px )</small>
+            <small class="bp2">( < 1024px )</small>
+            <small class="bp3">( < 780px )</small>
+        </h1>
+
+    </main>
+</body>
+</html>
