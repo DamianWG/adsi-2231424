@@ -4,74 +4,197 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Menu</title>
-    <style>
-     * { transition: all 0.5s ease-out  }
+    <title>Challenge Responsive Design (Media Queries)</title>
+    	<style>
+		* {
+			transition: all 0.5s;
+		}
+		body {
+			font: 16px Arial;
+            background: url(imgs/challenge/kyojuro-rengoku-con-fuego-kimetsu-no-yaiba_3840x2160_xtrafondos.com.jpg) no-repeat center;
 
-        body {
-            background-color: #000000;
-        }
-        main figure.logo {
-            border: 2px solid #e555;
-            background: url(imgs/challenge/Untitled.png) no-repeat center;
-            height: 470px;
-            margin: 0px auto;
-            width: 580px;
-        }
-        main h1 {
-            text-align: center;
-        }
-        main h1 small {
-            font-size: 0.4em;
-        }
-        main h1 small.bp2,
-        main h1 small.bp3 {
-            display: none;
-        }
-       
-         @media (max-width: 1024px) {
-            main figure.logo {
-                background: url(imgs/challenge/Untitled\ 1.png) no-repeat center;
-                height: 235px;
-                width: 415px;
-            }
-            main h1 small.bp1,
-            main h1 small.bp3 {
-                display: none;
-            }
-            main h1 small.bp2 {
-                display: inline;
-            }
-         }
+		}
+		main {
+			margin: 0px auto;
+			width: 1280px;
+		}
+		header div.logo {
+			background: url(imgs/challenge/Untitled.png) no-repeat center;
+			background-size: cover;
+			height: 600px;
+		}
+		section.boxes {
+			margin-top: 40px;
+		}
+		section.boxes div {
+			display: inline-block;
+			height: 280px;
+			margin-right: 28px;
+			position: relative;
+			width: 280px;
+		}
+		section.boxes div:first-child {
+			margin-left: 28px;
+		}
+		section.boxes div:last-child {
+			margin-right: 0px;
+		}
+		section.boxes div:nth-child(1n) {
+			background: url(imgs/challenge/kyojuro-rengoku-con-fuego-kimetsu-no-yaiba_3840x2160_xtrafondos.com.jpg) no-repeat center;
+			background-size: cover;
+		}
+		section.boxes div:nth-child(2n) {
+			background: url(imgs/challenge/https___bucketeer-e05bbc84-baa3-437e-9518-adb32be77984.s3.amazonaws.com_public_images_f2340ac4-3ba9-4c14-bcc7-3aec23a7fd30_914x514.jpeg) no-repeat center;
+			background-size: cover;
+		}
+		section.boxes div p {
+			background-color: rgba(0, 0, 0, .6);
+			color: rgba(255,255,255, .8);
+			bottom: 0px;
+			font-size: 1.4em;
+			height: 20px;
+			margin: 0px;
+			padding: 20px;
+			position: absolute;
+			text-align: center;
+			width: 240px;
+			transition: all 0.4s;
+		}
+		section.boxes div:hover {
+			cursor: pointer;
+		}
+		section.boxes div:hover p {
+			height: 60px;
+		}
+		footer {
+			margin-top: 40px;
+		}
+		footer article {
+			border: 1px dashed rgba(0,0,0,.2);
+			height: 280px;
+			position: relative;
+			margin: 50px 28px;
+		}
+		footer article figure {
+			background: url(imgs/challenge/RENGOKU.jpg) no-repeat;
+			background-size: cover;
+			height: 280px;
+			margin: 0px;
+			width: 280px;
+		}
+		footer article.art1 figure {
+			background-position: right center;
+            background: url(imgs/challenge/akazaa.jpg) no-repeat;
+			background-size: cover;
+			height: 280px;
+			margin: 0px;
+			width: 280px;
 
-        @media (max-width: 780px) {
-            main figure.logo {
-                background: url(imgs/challenge/Logo.png) no-repeat center;
-                height: 160px;
-                width: 170px;
-            }
-            main h1 small.bp1,
-            main h1 small.bp2 {
-                display: none;
-            }
-            main h1 small.bp3 {
-                display: inline;
-            }
-        }
-            
-
-    </style>
+		}
+		footer article figure,
+		footer article div {
+			display: inline-block;
+			vertical-align: top;
+		}
+		footer article div {
+			margin-left: 28px;
+			width: 600px;
+		}
+		footer article div h2 {
+			color: #000000fe;
+			font-size: 2em;
+			margin: 20px 0px;
+		}
+		footer article div p {
+			color: #000000;
+			line-height: 1.4em;
+			text-align: justify;
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - */
+		@media (max-width: 1290px) {
+			main {
+				width: 680px;
+			}
+			header div.logo {
+				background-size: 120%;
+			}
+			section.boxes div {
+				margin: 28px;
+			}
+			footer article div {
+				width: 280px;
+			}
+			footer article div h2 {
+				font-size: 1.4em;
+			}
+			footer article div p {
+				color: #000000;
+				overflow: scroll;
+				height: 180px;
+			}
+		}
+		/* - - - - - - - - - - - - - - - - - - - - - */
+		@media (max-width: 690px) {
+			main {
+				width: 480px;
+			}
+			section.boxes div {
+				display: block;
+				margin: 28px auto !important;
+			}
+			footer article {
+				height: 560px;
+				margin: 40px auto;
+				width: 280px;
+			}
+			footer article figure,
+			footer article div {
+				display: block;
+			}
+			footer article div {
+				margin-left: 0px;
+				width: 280px;
+			}
+		}
+	</style>
 </head>
 <body>
-    <main>
-        <figure class="logo"></figure>
-        <h1> 
-            Media Queries 
-            <small class="bp1">( > 1024px )</small>
-            <small class="bp2">( < 1024px )</small>
-            <small class="bp3">( < 780px )</small>
-        </h1>
-
-    </main>
+	<main>
+		<header>
+			<div class="logo"></div>
+		</header>
+		<section class="boxes">
+			<div class="box1">
+				<p>OPM <small>(Temporada 1)</small></p>
+			</div>
+			<div class="box2">
+				<p>OPM <small>(Temporada 2)</small></p>
+			</div>
+			<div class="box3">
+				<p>OPM <small>(Temporada 3)</small></p>
+			</div>
+			<div class="box4">
+				<p>OPM <small>(Temporada 4)</small></p>
+			</div>
+		</section>
+		<footer>
+			<article class="art1">
+				<figure></figure>
+				<div class="content">
+					<h2> AKAZA </h2>
+					<p>
+						Akaza es un Demonio fuerte, terco e impulsivo al que le gustaba pelear, especialmente a los Demon Slayers fuertes . Despreciaba a cualquiera que considerara débil, pero respetaba genuinamente a aquellos que eran fuertes a sus ojos, independientemente de su raza. Akaza, la Tercera Luna Superior. Me atrevería a decir que este demonio consiguió conquistar el corazón de mas de un lector, pues a su trágico pasado se le suma que no es una Luna común, al menos, si lo comparamos con sus compañeros.					</p>
+				</div>
+			</article>
+			<article class="art2">
+				<figure></figure>
+				<div class="content">
+					<h2> RENGOKU </h2>
+					<p>
+						Es un guerrero honorable que se adhirió a su código de moral y principios que le inculcó su madre a una edad temprana, siendo la más importante su creencia de que aquellos que nacieron fuertes tienen el deber de proteger a los débiles. La Llama Hashira, Rengoku, murió en el tren Mugen cuando luchaba contra Akaza, un demonio de rango superior tres. Después de ser derrotado, confió su voluntad a Tanjiro y falleció. Por otro lado podemos ver que el poderoso Pilar Agua, Giyu Tomioka, mide 1.76 metros y la sonrisa que no pudimos proteger, el fallecido Pilar Fuego, Kyojuro Rengoku mide 1 metro con 77 centimetros, sin duda su estatura no es muy alejada del promedio de los humanos reales. 					</p>
+				</div>
+			</article>
+		</footer>
+	</main>
 </body>
 </html>
